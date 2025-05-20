@@ -19,10 +19,8 @@ import java.util.Properties;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-//@ComponentScan(value = "web")
 public class AppConfig {
 
-//    @Autowired
     private final Environment env;
 
     public AppConfig(Environment env) {
@@ -36,10 +34,6 @@ public class AppConfig {
         em.setDataSource(dataSource());
         em.setPackagesToScan("web.model");
 
-//        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-//        vendorAdapter.setDatabasePlatform("org.hibernate.dialect.PostgreSQLDialect");
-
-//        em.setJpaVendorAdapter(vendorAdapter);
         JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(jpaVendorAdapter);
         em.setJpaProperties(additionalProperties());

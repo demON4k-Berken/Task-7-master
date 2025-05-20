@@ -5,8 +5,6 @@ import web.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -37,11 +35,6 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public List<User> findAllUsers() {
-//        TypedQuery<User> query = entityManager.createQuery("select u from User u", User.class);
-//        return query.getResultList();
-
-//        List<User> users = entityManager.createQuery("select u from User u", User.class).getResultList();
-//        return users;
         return entityManager.createQuery("from User", User.class).getResultList();
     }
 }
