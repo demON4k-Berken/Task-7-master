@@ -15,7 +15,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 //@EnableTransactionManagement
 
-//@PropertySource("classpath:hibernate.properties")
+//@PropertySource("classpath:db.properties")
 @Configuration
 @EnableWebMvc
 @ComponentScan("web")
