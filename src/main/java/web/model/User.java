@@ -11,17 +11,17 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @ToString
-@Table (name = "users")
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id")
+    @Column(name = "id")
     private long id;
 
     @NotEmpty(message = "Имя не может быть пустым")
     @Size(min = 2, message = "Имя должно быть от 2 символов")
-    @Column (name = "name")
+    @Column(name = "name")
     private String name;
 
     @NotEmpty(message = "Фамилия не может быть пустой")
@@ -30,7 +30,7 @@ public class User {
     private String lastName;
 
     @Min(value = 0, message = "Возраст не может быть меньше 0")
-    @Column (name = "age")
+    @Column(name = "age")
     private int age;
 
     public User() {
