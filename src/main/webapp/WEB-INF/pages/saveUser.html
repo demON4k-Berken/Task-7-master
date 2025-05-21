@@ -11,12 +11,16 @@
 
     <label for="name">Enter name: </label>
     <input type="text" th:field="*{name}" id="name" placeholder="name"/>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Ошибка написания имени</div>
     <br>
     <label for="surname">Enter surname: </label>
     <input type="text" th:field="*{lastName}" id="surname" placeholder="surname"/>
+    <div style="color:red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Ошибка написания фамилии
+    </div>
     <br>
     <label for="age">Enter age: </label>
     <input type="text" th:field="*{age}" id="age" placeholder="age"/>
+    <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Ошибка написания возраста</div>
     <br>
     <input type="submit" value="Create!">
 </form>
