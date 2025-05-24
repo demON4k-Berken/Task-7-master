@@ -21,7 +21,7 @@
     <div style="color:red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Ошибка написания фамилии
     </div>
     <br>
-    <label for="age">Enter address: </label>
+    <label for="age">Enter age: </label>
     <input type="text" th:field="*{age}" id="age" placeholder="age"/>
     <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Ошибка написания возраста</div>
     <br><br>
